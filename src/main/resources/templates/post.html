@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${blogPost.title}">Blog Post</title>
+</head>
+<body>
+    <h1 th:text="${blogPost.title}">Blog Post Title</h1>
+    <p th:text="${blogPost.content}">Blog Post Content</p>
+    <a th:href="@{/delete/{id}(id=${blogPost.id})}">Delete Post</a>
+    <a href="/">Back to Home</a>
+</body>
+</html>

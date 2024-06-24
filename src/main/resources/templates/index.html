@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th= "http://www.thymeleaf.org">
+    <head>
+        <tltle>자바자바 블로그 프로젝트</title>
+    </head>
+    <body>
+        <h1>블로그 게시</h1>
+        <ul>
+            <li th:each = "blogPost : ${blogPosts}">
+                <a th:href = "@{/post/{id}(id=${blogPost.id})}" th:text="${blogPost.title}">Blog Post Title</a>
+            </li>
+        </ul>
+        <a href="/create">Create New Post</a>
+    </body>
+</html>
